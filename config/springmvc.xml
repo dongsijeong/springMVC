@@ -3,4 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--简单控制器处理适配器，所有实现了org.springframework.web.servlet.mvc.Controller接口的Bean作为Springmvc的后端处理器-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
 </beans>
