@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--配置handler-->
+    <bean name="/queryItems.action" class="com.ssm.controller.ItemList1Controller" />
+    <!--处理器映射器
+        将bean的name作为url进行查找,需要在配置Handler时指定beanname（就是url）
+    -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
 
     <!--简单控制器处理适配器，所有实现了org.springframework.web.servlet.mvc.Controller接口的Bean作为Springmvc的后端处理器-->
-    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean>
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+
+    <!--配置视图解析器,解析jsp，默认使用jstl标签，classpath下面得有jstl的包-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
+
 </beans>
