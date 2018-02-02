@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-
+    <display-name>springMVC</display-name>
     <!--springMVC前端控制器-->
     <servlet>
         <servlet-name>springmvc</servlet-name>
@@ -12,7 +12,7 @@
         <!--如果不配置contextConfigLocation,默认加载的是/WEB-INF/servlet名称-servlet.xml(springmvc-servlet.xml)-->
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:../config/springmvc.xml</param-value>
+            <param-value>classpath:config/springmvc.xml</param-value>
         </init-param>
         <!--表示servlet随服务启动-->
         <load-on-startup>1</load-on-startup>
